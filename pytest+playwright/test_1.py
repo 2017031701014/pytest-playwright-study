@@ -12,5 +12,6 @@ def test_search(page:Page):
     time.sleep(1)
     input_box.fill("《明日方舟》")
     time.sleep(1)
+    page.screenshot(path="./screenshot.png")
     page.locator("//button[@id='chat-submit-button']").click()
     time.sleep(1)
