@@ -1,6 +1,6 @@
 import time
 
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 
 
 def test_search(page:Page):
@@ -11,7 +11,7 @@ def test_search(page:Page):
     input_box.click()
     time.sleep(1)
     input_box.fill("《明日方舟》")
+    # page.locator("//button[@id='chat-submit-button']").click()
+    page.evaluate('location.href="https://qq.com"')
     time.sleep(1)
     page.screenshot(path="./screenshot.png")
-    page.locator("//button[@id='chat-submit-button']").click()
-    time.sleep(1)
