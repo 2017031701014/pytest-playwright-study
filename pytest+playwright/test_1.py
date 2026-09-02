@@ -2,7 +2,7 @@ import time
 
 from playwright.sync_api import Page, expect
 
-
+# (page:Page) 这个函数的参数 page 是一个 Page 类型的对象
 def test_search(page:Page):
     print("url:" + page.url)
     # 因为 conftest 中已经 goto 了百度，这里直接操作
