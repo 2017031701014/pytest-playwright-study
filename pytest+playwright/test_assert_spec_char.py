@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
 import re
-import time
+
 
 # spec 给出了可范围
 def test_assert_spec_char1(page:Page):
